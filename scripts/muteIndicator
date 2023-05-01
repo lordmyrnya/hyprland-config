@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $1 = "-s" ]; then
+    sleep 5
+fi
+
+muted=$(pactl get-source-mute @DEFAULT_SOURCE@)
+if [ "$muted" = "Mute: no" ]; then
+    indicator=0
+else
+    indicator=1
+fi
+brightnessctl -q -d platform::micmute set $indicator

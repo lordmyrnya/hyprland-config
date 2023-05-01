@@ -1,0 +1,165 @@
+* {
+	font-family: 'JetBrainsMono', 'Noto Sans', 'Roboto Condensed', sans-serif;
+	font-size: 12px;
+	/* color: #3A3B3C; */
+}
+
+window#waybar {
+	/* Transparent waybar. Make sure to comment out background-color: and border: */
+	background: transparent;
+	/* background-color: transparent; */
+	/* border: 2px solid #313244; */
+	/* border-radius: 5px; */
+	/* transition-property: background-color; */
+	/* transition-duration: 0.5s; */
+}
+
+window#waybar.hidden {
+	/* opacity: 0.5;
+	background: rgba(252, 0, 0, 0); */
+}
+
+#backlight,
+#battery,
+#clock,
+#cpu,
+#disk,
+#memory,
+#tray,
+#pulseaudio,
+#custom-menu,
+#custom-power,
+#custom-weather,
+#custom-updater,
+#custom-keybindings,
+#custom-cycle_wall,
+#network {
+	border-radius: 10px;
+	margin: 4px 0px;
+	padding: 0px 10px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+	/*border: 2px solid #3a3b3c; */
+}
+
+#workspaces {
+	border-radius: 4px;
+	margin: 4px 0px;
+	padding: 0px 4px;
+	color: #3a3b3c;
+}
+
+#battery {
+	/* background-color: #f9e2af; */
+}
+
+@keyframes blink {
+	to {
+		color: #000000;
+	}
+}
+
+#battery.critical:not(.charging) {
+	color: #ff0000;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#clock {
+	/* background-color: #a6e3a1; */
+	padding: 7px 20px;
+}
+
+#cpu {
+	/* background-color: #89dceb; */
+}
+
+#memory {
+	/* background-color: #eba0ac; */
+}
+
+#disk {
+	/* background-color: #b4befe; */
+}
+
+#tray {
+	/* background-color: #b4befe; */
+}
+#tray > .passive {
+	-gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+	-gtk-icon-effect: highlight;
+}
+
+#workspaces button {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	/* border: 2px solid #3a3b3c; */
+	margin-right: 2px;
+	border-radius: 7px;
+}
+
+#workspaces button.active {
+	background-color: rgb(249, 226, 175);
+	color: rgb(12, 12, 12);
+}
+
+#custom-menu {
+	background-color: #f5c2e7;
+}
+
+#custom-power {
+	/* background-color: #f38ba8; */
+	margin-right: 4px;
+}
+
+#custom-uptime {
+	background-color: #e6ed7b;
+}
+
+#custom-weather {
+	background-color: #cba6f7;
+}
+
+#custom-cycle_wall {
+	background-color: #89dceb;
+}
+
+#custom-vpn_check {
+	background-color: #a6e3a1;
+}
+
+#custom-cputemp {
+	background-color: #86b4fa;
+}
+
+#custom-keybindings {
+	background-color: #86b4fa;
+	font-size: 24px;
+}
+
+#pulseaudio {
+	/* background-color: #fab387; */
+	/* font-size: 24px; */
+}
+
+#pulseaudio.bluetooth {
+	background-color: #f5c2e7;
+}
+#pulseaudio.muted {
+	/* background-color: #313244; */
+	color: #b50505;
+}
+
+#network {
+	/* background-color: #89b4fa; */
+}
+#network.disconnected,
+#network.disabled {
+	/* background-color: #313244; */
+	/* color: #cdd6f4; */
+}

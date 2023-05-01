@@ -1,0 +1,9 @@
+#!/bin/bash
+
+killall waybar
+cfgFolder="/home/lordmyrnya/.config/hypr/component/waybar/"
+
+cfgName="andrew"
+
+cfg=$cfgFolder$cfgName
+exec waybar -s "$cfg/style.css" -c "$cfg/config"

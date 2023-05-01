@@ -1,0 +1,32 @@
+{
+	"include": "~/.config/hypr/component/waybar/andrew/modules",
+	"layer": "top",
+	// "mode": "dock",
+	// "exclusive": true,
+	// "passthrough": true,
+	"position": "top",
+	"spacing": 15,
+	"fixed-center": true,
+	"ipc": true,
+	"margin-left": 10,
+	"margin-right": 10,
+	"margin-top": 10,
+	"modules-left": [
+		"custom/power",
+		"wlr/workspaces",
+		"cpu",
+		"memory",
+		"disk"
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"custom/updater",
+		"pulseaudio",
+		"backlight",
+		"network",
+		"battery",
+		"tray"
+	]
+}
