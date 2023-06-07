@@ -26,6 +26,7 @@
 		"pulseaudio",
 		"backlight",
 		"network",
+		"custom/keyboard_layout",
 		"battery",
 		"tray"
 	]

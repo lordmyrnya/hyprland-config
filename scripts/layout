@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cache=$HOME/.config/hypr/cache/layout
+
+locales=("EN" "RU")
+count=$((${#locales[@]}-1))
+
+for i in "${!locales[@]}"
+do
+    if [ ${locales[i]} = $(cat $cache) ]; then 
+        if [ $count -eq $i ]; then
+            echo ${locales[0]} > $cache
+        else echo ${locales[i+1]} > $cache
+        fi
+        exit 1
+    fi
+done
